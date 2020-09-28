@@ -1,15 +1,12 @@
 HackerSmacker's BSDNJE
-Based on Moshix' linuxNJE, which is based on FunetNJE, which is based on HUJI-NJE.
+BITNET emulation for modern BSD systems
 
-Compiling:
-You need GCC, and a GNU Make. 
-gmake
+Compiling and installing:
+1. Add a group called "funetnje"
+2. gmake
+3. gmake install1
+4. gmake install
+5. Edit /etc/funetnje/funetnje.cf
+6. /usr/local/funetnje/funetnje
 
-Installing:
-Edit /etc/group and add a group for BSDNJE named funetnje.
-gmake install1
-mkdir /etc/funetnje
-mv /etc/funetnje.cf /etc/funetnje
-gmake install
-
-As you can see, I need to edit the Makefile.
+There! That's all. For bug reports, please message HackerSmacker#8496 on Discord.
