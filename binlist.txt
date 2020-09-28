@@ -10,3 +10,5 @@ receive
 sendfile
 tell
 ucp
+transfer
+ygone

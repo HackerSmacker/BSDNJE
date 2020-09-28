@@ -211,7 +211,7 @@ purgecode:
 	rm -f $(PROGRAMS)
 
 clean:
-	rm -f \#*\# core *.o *~ *.ln *.a `cat binlist.txt`
+	rm -f \#*\# core *.o *~ *.ln *.a `cat binlist.txt` man/*.ps
 
 route:	nje.route
 
