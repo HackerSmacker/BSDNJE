@@ -296,7 +296,8 @@ install1:	route
 	@echo "MUST BE ROOT TO DO THIS!"
 	@echo "(this is for NIC.FUNET.FI)"
 	-mkdir ${LIBDIR}
-	cp finfiles.cf /etc/funetnje.cf
+	mkdir /etc/funetnje
+	cp finfiles.cf /etc/funetnje/funetnje.cf
 	cp nje.route* ${LIBDIR}
 	cp file-exit.cf ${LIBDIR}/file-exit.cf
 	cp msg-exit.cf ${LIBDIR}/msg-exit.cf
