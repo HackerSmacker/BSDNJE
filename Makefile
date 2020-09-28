@@ -72,7 +72,6 @@
 #	-DUSE_OWN_PROTOS  If the "prototypes.h" -prototypes for various things
 #			can fit your system, and your system does not have
 
-# Linux drb version
 CDEFS=-DUSG -DNBCONNECT -DNBSTREAM -DUSE_XMIT_QUEUE \
 	-DUSE_SOCKOPT -DSOCKBUFSIZE=8192 -DUSE_ENUM_TYPES -DDEBUG \
 	-DCONFIG_FILE='"/etc/funetnje/funetnje.cf"' \
@@ -212,7 +211,7 @@ purgecode:
 	rm -f $(PROGRAMS)
 
 clean:
-	rm -f \#*\# core *.o *~ *.ln *.a
+	rm -f \#*\# core *.o *~ *.ln *.a `cat binlist.txt`
 
 route:	nje.route
 
@@ -225,7 +224,7 @@ install-man:
 	for x in $(MAN8); do $(INSTALL) -c -m 644 $$x $(MANDIR)/man8;done
 
 man-ps:
-	for X in $(MANSRCS); do groff -man $$X >$$X.ps; done
+	for X in $(MANSRCS); do groff -man -ps $$X >$$X.ps; done
 
 nje.route:	finfiles.header finfiles.netinit
 	@echo "THIS IS FOR NIC.FUNET.FI!"

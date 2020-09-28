@@ -1,0 +1,12 @@
+acctcat
+bitsend
+bmail
+funetnje
+mailify
+namesfilter
+njeroutes
+qrdr
+receive
+sendfile
+tell
+ucp
