@@ -57,7 +57,7 @@ unsigned long	DMF_routine_address;	/* The address of DMF framing routine */
 #endif
 
 /*   Unix specific includes   */
-#ifdef unix
+#if defined(__unix__) || defined(__APPLE__)
 #define	UNIX
 #include <stdio.h>	/* Unix standard file descriptors */
 #include <sys/types.h>
