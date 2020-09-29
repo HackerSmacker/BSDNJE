@@ -759,3 +759,4 @@ INTERNAL struct	LINE	IoLines[ABSMAX_LINES];
 EXTERNAL struct	LINE	IoLines[ABSMAX_LINES];
 #endif
 EXTERNAL char		*version_time;
+

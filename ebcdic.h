@@ -137,3 +137,4 @@ unsigned char	EBCDIC_ASCII[256] =  {
 #else		/* Define them as external */
 extern unsigned char	ASCII_EBCDIC[256], EBCDIC_ASCII[256];
 #endif
+
