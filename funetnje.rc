@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# PROVIDE: funetnje
+# REQUIRE: DAEMON LOGIN FILESYSTEMS
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="funetnje"
+desc="BSDNJE"
+rcvar="nje_enable"
+command="/usr/local/funetnje/funetnje"
+pidfile="/var/run/funetnje.pid"
+required_files="/etc/funetnje/funetnje.cf"
+extra_commands="reload"
+
+load_rc_config $name
+run_rc_command "$1"
