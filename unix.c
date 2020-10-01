@@ -37,6 +37,13 @@
 #define	TEMP_R_FILE		".NJE_R_"	/* Won't submit temp files.. */
 #define	TEMP_R_EXT		"TMP"		/* before they are ready.. */
 
+#ifdef USE_XMIT_QUEUE
+int dequeue_xmit_queue(const int Index);
+#endif
+
+void fileid_db_close();
+
+
 static int	CommandSocket = -1;	/* The command socket number */
 struct sockaddr_in CommandAddress;	/* Incoming command originator addr */
 /*static int      CommandAddressLen;*/
